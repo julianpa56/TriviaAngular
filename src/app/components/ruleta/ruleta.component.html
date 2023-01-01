@@ -1,0 +1,46 @@
+
+<div class="contenedor-general">
+    <div class="contenedor-ruleta">
+        <img class="flecha-ruleta" src="./../../../assets/image/flecha-ruleta.png" alt="flecha ruleta">
+        <img class="ruleta" src="./../../../assets/image/ruleta.png" alt="ruleta" #ruleta>
+        <button (click)="cambio()" [disabled]="botonDeshabilitado"></button>
+        <audio style="display: none;" src="./../../../assets/sonido/ruleta.mp3" #audio></audio>
+    </div>
+    
+    <div class="contenedor-preguntas">
+        <h2 *ngIf="categoriaSeleccionada != ''">¡{{categoriaSeleccionada}}!</h2>
+        <div class="pregunta">
+            <h4>Pregunta</h4>
+            <div class="respuestas">
+
+                <div class="respuesta">
+                    <div class="face front">
+                        <img src="./../../../assets/image/fondo-juego.jpg" alt="respuesta">
+                    </div>
+                    <div class="face back">
+                        <p>Texto alternativo</p>
+                    </div>
+                </div>
+
+                <div class="respuesta">
+                    <div class="face front">
+                        <img src="./../../../assets/image/fondo-juego.jpg" alt="respuesta">
+                    </div>
+                    <div class="face back">
+                        <p>Texto alternativo</p>
+                    </div>
+                </div>
+
+                <div class="respuesta">
+                    <div class="face front">
+                        <img src="./../../../assets/image/fondo-juego.jpg" alt="respuesta">
+                    </div>
+                    <div class="face back">
+                        <p>Texto alternativo</p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
