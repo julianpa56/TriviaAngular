@@ -7,36 +7,36 @@
         <audio style="display: none;" src="./../../../assets/sonido/ruleta.mp3" #audio></audio>
     </div>
     
-    <div class="contenedor-preguntas">
-        <h2 *ngIf="categoriaSeleccionada != ''">¡{{categoriaSeleccionada}}!</h2>
-        <div class="pregunta">
-            <h4>Pregunta</h4>
-            <div class="respuestas">
+    <div class="contenedor-preguntas" #preg>
+        <div  class="pregunta" *ngIf="categoriaSeleccionada != null">
+            <h4 *ngIf="categoriaSeleccionada != ''">¡{{categoriaSeleccionada.categoria}}!</h4>
+            <h4>{{categoriaSeleccionada.preguntas[0].pregunta}}</h4>
+            <div class="respuestas" >
 
-                <div class="respuesta">
+                <div class="respuesta" (click)="seleccionarRespuesta(1)">
                     <div class="face front">
-                        <img src="./../../../assets/image/fondo-juego.jpg" alt="respuesta">
+                        <img src="{{categoriaSeleccionada.preguntas[0].imagen1}}" alt="respuesta">
                     </div>
                     <div class="face back">
-                        <p>Texto alternativo</p>
+                        <p>{{categoriaSeleccionada.preguntas[0].respuesta1}}</p>
                     </div>
                 </div>
 
-                <div class="respuesta">
+                <div class="respuesta" (click)="seleccionarRespuesta(2)">
                     <div class="face front">
-                        <img src="./../../../assets/image/fondo-juego.jpg" alt="respuesta">
+                        <img src="{{categoriaSeleccionada.preguntas[0].imagen2}}" alt="respuesta">
                     </div>
                     <div class="face back">
-                        <p>Texto alternativo</p>
+                        <p>{{categoriaSeleccionada.preguntas[0].respuesta2}}</p>
                     </div>
                 </div>
 
-                <div class="respuesta">
+                <div class="respuesta" (click)="seleccionarRespuesta(3)">
                     <div class="face front">
-                        <img src="./../../../assets/image/fondo-juego.jpg" alt="respuesta">
+                        <img src="{{categoriaSeleccionada.preguntas[0].imagen3}}" alt="respuesta">
                     </div>
                     <div class="face back">
-                        <p>Texto alternativo</p>
+                        <p>{{categoriaSeleccionada.preguntas[0].respuesta3}}</p>
                     </div>
                 </div>
                 
