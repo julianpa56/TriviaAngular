@@ -60,7 +60,6 @@
 /* Preguntas */
 
 .contenedor-preguntas{
-    background-color: yellow;
     width: 70vw;
     height: 100%;
     display: flex;
@@ -78,12 +77,25 @@
 .contenedor-preguntas .pregunta {
     width: 90%;
     height: 70vh;
-    background-color: red;
+    background-color: brown;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     padding: 30px 0;
+    border-radius: 30px;
+}
+
+.pregunta h3 {
+    font-size: 50px;
+    color: yellow;
+    font-family: 'Low Budget';
+}
+
+.pregunta h4 {
+    font-size: 25px;
+    color: white;
+    font-weight: bold;
 }
 
 .respuestas {
@@ -104,6 +116,8 @@
     height: 100%;
     backface-visibility: hidden;
     transition: 1s;
+    border: 10px solid yellow;
+    border-radius: 30px;
 }
 
 .front {
@@ -120,6 +134,10 @@
 .back {
     transform: perspective(600px) rotateY(180deg);
     background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .respuesta:hover .front {
@@ -165,7 +183,7 @@
 .puntuacion {
     width: fit-content;
     position: absolute;
-    bottom: 50px;
+    bottom: 20px;
     display: flex;
     gap: 10px;
     z-index: 80;

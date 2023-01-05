@@ -11,7 +11,7 @@
 
 .contenedor-principal h1 {
     position: absolute;
-    top: 50px;
+    top: 20px;
     left: 50%;
     transform: translateX(-50%);
     font-family: 'Low Budget';
