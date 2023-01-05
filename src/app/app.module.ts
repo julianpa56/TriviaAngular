@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RuletaComponent } from './components/ruleta/ruleta.component';
 import {MatTabsModule} from '@angular/material/tabs';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import {MatTabsModule} from '@angular/material/tabs';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatTabsModule
+    MatTabsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

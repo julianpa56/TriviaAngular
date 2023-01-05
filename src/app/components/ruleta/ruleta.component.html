@@ -5,6 +5,23 @@
         <img class="ruleta" src="./../../../assets/image/ruleta.png" alt="ruleta" #ruleta>
         <button (click)="cambio()" [disabled]="botonDeshabilitado"></button>
         <audio style="display: none;" src="./../../../assets/sonido/ruleta.mp3" #audio></audio>
+        <audio style="display: none;" src="./../../../assets/sonido/correcto.mp3" #correcto></audio>
+        <audio style="display: none;" src="./../../../assets/sonido/incorrecto.mp3" #incorrecto></audio>
+    </div>
+
+    <div class="puntuacion">
+        <div>
+            <img *ngIf="puntuacion[0] == true" src="./../../../assets/image/correcto.png" alt="correcto">
+            <img *ngIf="puntuacion[0] == false" src="./../../../assets/image/incorrecto.png" alt="incorrecto">
+        </div>
+        <div>
+            <img *ngIf="puntuacion[1] == true" src="./../../../assets/image/correcto.png" alt="correcto">
+            <img *ngIf="puntuacion[1] == false" src="./../../../assets/image/incorrecto.png" alt="incorrecto">
+        </div>
+        <div>
+            <img *ngIf="puntuacion[2] == true" src="./../../../assets/image/correcto.png" alt="correcto">
+            <img *ngIf="puntuacion[2] == false" src="./../../../assets/image/incorrecto.png" alt="incorrecto">
+        </div>
     </div>
     
     <div class="contenedor-preguntas" #preg>
@@ -42,5 +59,22 @@
                 
             </div>
         </div>
+    </div>
+
+    <div #modalSolucion class="container-modal">
+        <div class="body-modal">
+            <img *ngIf="esCorrecto == true" src="./../../../assets/image/correcto.png" alt="correcto">
+            <img *ngIf="esCorrecto == false" src="./../../../assets/image/incorrecto.png" alt="incorrecto">
+        </div>
+    </div>
+
+    <div *ngIf="contadorPreguntas == 3" class="puntuacion-final">
+    <!-- <div  class="puntuacion-final"> -->
+        <h1>Puntuación final para {{jugador}}</h1>
+        <h2 *ngIf="contadorCorrectas == 0">Malardo</h2>
+        <h2 *ngIf="contadorCorrectas == 1">Bien</h2>
+        <h2 *ngIf="contadorCorrectas == 2">Muy Bien</h2>
+        <h2 *ngIf="contadorCorrectas == 3">Excelente</h2>
+        <button (click)="reiniciarJuego()">Volver a jugar</button>
     </div>
 </div>

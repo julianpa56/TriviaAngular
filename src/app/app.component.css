@@ -1,0 +1,73 @@
+.contenedor-principal {
+    width: 100%;
+    height: fit-content;
+    min-height: 100vh;
+    background-image: url('./../assets/image/fondo-juego.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.contenedor-principal h1 {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Low Budget';
+    font-weight: bold;
+    font-size: 35px;
+    width: max-content;
+    text-align: center;
+    z-index: 80;
+    background-color: brown;
+    padding: 20px;
+    border-radius: 30px;
+    color: yellow;
+}
+
+.contenedor-principal .form-jugador {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.form-jugador form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    background-color: yellow;
+    border: 20px solid brown;
+    border-radius: 30px;
+    padding: 50px;
+}
+
+.form-jugador form label {
+    font-family: 'Low Budget';
+    font-size: 30px;
+    width: max-content;
+}
+
+.form-jugador form input {
+    border: 10px solid brown;
+    border-radius: 10px;
+    height: 50px;
+    font-size: 20px;background-color: brown;
+    color: white;
+    font-family: 'Low Budget';
+    text-align: center;
+}
+
+.form-jugador form button {
+    width: fit-content;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 30px;
+    font-family: 'Low Budget';
+    background-color: brown;
+    border-radius: 30px;
+    border: none;
+    color: yellow;
+}

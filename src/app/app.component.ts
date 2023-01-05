@@ -8,6 +8,8 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'app-ahorcado';
 
+  public nombreJugador : string = ''
+
   categorias = [
     {
       categoria : 'Matemáticas',
@@ -163,4 +165,14 @@ export class AppComponent {
       ]
     },
   ]
+
+
+
+  play(data: any){
+    this.nombreJugador = data.name
+  }
+
+  reiniciar(e:any){
+    this.nombreJugador = ''
+  }
 }

@@ -1,10 +1,22 @@
-<h1>Ruleta</h1>
+<div class="contenedor-principal">
+    <h1>PREGUNTAS Y RESPUESTAS</h1>
 
-<mat-tab-group>
-    <mat-tab label="Ruleta">
-        <app-ruleta [categorias]="categorias"></app-ruleta>
-    </mat-tab>
+    <div class="form-jugador" *ngIf="nombreJugador == ''">
+        <form action="" #playerForm="ngForm" (ngSubmit)="play(playerForm)" >
+            <label for="namePlayer">Ingresa el nombre del participante</label>
+            <input type="text" name="namePlayer" #title="ngModel" [(ngModel)]="playerForm.name">
+            <button type="submit">Jugar</button>
+        </form>
+    </div>
+    <app-ruleta *ngIf="nombreJugador != ''" 
+        [categorias]="categorias" 
+        [jugador]="nombreJugador"
+        (outputSalida)="reiniciar($event)">
+    </app-ruleta>
+</div>
+<!-- <mat-tab-group>
     <mat-tab label="Cargar preguntas"> 
-        Content 2 
     </mat-tab>
-</mat-tab-group>
+    <mat-tab label="Ruleta">
+    </mat-tab>
+</mat-tab-group> -->
